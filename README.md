@@ -1,19 +1,31 @@
-# cisco-config-backup-automator
-Automated Cisco Configuration Backup Tool A Python script leveraging Netmiko to automate backups of Cisco device configurations (IOS/IOS-XE), with error logging and multi-device support. Perfect for network engineers embracing DevOps practices.
+# Cisco Config Backup Automator 🚀
 
-🔹 Key Features
-🚀 Effortless Backups: Schedule or trigger on-demand config backups.
+Automatically backup Cisco device configurations using Python and Netmiko. Supports standalone and multi-device backups with error logging.
 
-⏱️ Time-Saver: Reduces manual backup time from minutes to seconds.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Netmiko](https://img.shields.io/badge/Netmiko-4.1.2-green)
+![License](https://img.shields.io/badge/License-MIT-orange)
 
-🔒 Secure: Supports password encryption via getpass/environment variables.
+## 📦 Scripts
 
-📁 Organized: Auto-generates timestamped backup files in backups/ folder.
+### 1. `backup_configuration.py`
+- **Basic single-device backup**
+- Features:
+  - Saves running config to timestamped file
+  - Minimal error handling
 
-📈 Scalable: Handles multiple devices with centralized error logging.
+### 2. `ultimate_backup.py`
+- **Advanced multi-device backup**
+- Features:
+  - Supports multiple devices
+  - Error logging to `logs/backup_errors.log`
+  - Secure password handling (environment variables/getpass)
+  - Organized backup folder structure
 
-🔹 Tech Stack
-Python
-Netmiko
-Cisco IOS-XE
+## 🛠 Setup
 
+### Prerequisites
+- Python 3.8+
+- Required packages:
+  ```bash
+  pip install netmiko getpass4
